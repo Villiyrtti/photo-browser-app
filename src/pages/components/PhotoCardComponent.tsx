@@ -1,34 +1,46 @@
-import { Paper, Stack, Typography, type PaperProps } from "@mui/material";
+import { 
+    Card, 
+    CardActionArea, 
+    CardContent,
+    CardMedia, 
+    Typography, 
+    type CardProps 
+} from "@mui/material";
+import { useNavigate } from "react-router";
 import type { Photo } from "../../types/CommonTypes";
 
 type PhotoCardComponentProps = {
     item: Photo;
-    customProps?: PaperProps;
+    customProps?: CardProps;
 };
 
 const PhotoCardComponent = ({ item, ...customProps }: PhotoCardComponentProps) => {
+    const navigate = useNavigate();
+
     return(
-        <Paper 
-            sx={{ height: '450px' }}
+        <Card
+            sx={{ 
+                height: '450px',
+                padding: 2
+            }}
             {... customProps }>
-            <Stack
-                padding={1}
-                spacing={2}
-                sx={{
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
-                <img
-                    width={240}
-                    src={'https://picsum.photos/200/300'}
-                    alt={item.title} />
-                <Typography
-                    variant='body1'
-                    align='center'>
-                    {item.title}
-                </Typography>
-            </Stack>
-        </Paper>
+            <CardActionArea
+                onClick={() => navigate({ pathname: `/photos/${item.id}` })}>
+                <CardMedia
+                    component='img'
+                    height='350'
+                    image='https://picsum.photos/200/300'
+                    alt={item.title}
+                    />
+                <CardContent>
+                    <Typography
+                        variant='body1'
+                        align='center'>
+                        {item.title}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
     );
 };
 

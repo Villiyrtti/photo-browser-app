@@ -18,7 +18,7 @@ const MainPage = () => {
   }
 
   useEffect(() => {
-      const fetchData = async () => {
+      const fetchData = async() => {
           return updatePhotoArray();
       };
 
@@ -28,7 +28,7 @@ const MainPage = () => {
   }, []);
 
   useEffect(() => {
-      const fetchData = async () => {
+      const fetchData = async() => {
           return updatePhotoArray();
       }
       fetchData();

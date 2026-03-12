@@ -5,3 +5,9 @@ export const getPhotos = async(pageNumber: number) => {
     const data: Photo[] = await response.json();
     return data;
 };
+
+export const fetchPhotoInformation = async(id: string) => {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/photos/${id}`)
+    const data: Photo = await response.json();
+    return data;
+};
