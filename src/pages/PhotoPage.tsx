@@ -4,10 +4,10 @@ import { fetchPhotoInformation } from "../api/API";
 import { Box, Grid } from "@mui/material";
 
 import HeaderComponent from "./components/HeaderComponent";
-import CardInfoComponent from "./components/CardInfoComponent";
+import PhotoInfoComponent from "./components/photopage/PhotoInfoComponent";
 import type { Photo } from "../types/CommonTypes";
 
-const CardPage = () => {
+const PhotoPage = () => {
     const { id } = useParams();
     const [photoInfo, setPhotoInfo] = useState<Photo | null >(null);
     
@@ -31,10 +31,10 @@ const CardPage = () => {
                 alignItems: 'center'
                 }}>
                 <HeaderComponent />
-                { photoInfo && <CardInfoComponent photoInfo={photoInfo} />}
+                { photoInfo && <PhotoInfoComponent photoInfo={photoInfo} />}
             </Grid>
         </Box>  
     );
 };
 
-export default CardPage;
+export default PhotoPage;

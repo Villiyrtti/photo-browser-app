@@ -1,11 +1,11 @@
 import { Stack, Typography } from "@mui/material"
-import type { Photo } from "../../types/CommonTypes";
+import type { Photo } from "../../../types/CommonTypes";
 
-type CardInfoComponentProps = {
+type PhotoInfoComponentProps = {
     photoInfo: Photo
 };
 
-const CardInfoComponent = ({ photoInfo }: CardInfoComponentProps) => {
+const PhotoInfoComponent = ({ photoInfo }: PhotoInfoComponentProps) => {
     return(
         <Stack direction={'row'}>
             <img 
@@ -34,4 +34,4 @@ const CardInfoComponent = ({ photoInfo }: CardInfoComponentProps) => {
     );
 };
 
-export default CardInfoComponent;
+export default PhotoInfoComponent;

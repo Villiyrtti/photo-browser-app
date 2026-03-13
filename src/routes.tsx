@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 
 import MainPage from './pages/MainPage.tsx'
-import CardPage from "./pages/CardPage.tsx";
+import PhotoPage from "./pages/PhotoPage.tsx";
 
 export const AppRouter = () => {
     const routes = createBrowserRouter([
@@ -12,7 +12,7 @@ export const AppRouter = () => {
             },
             {
                 path: '/photos/:id',
-                Component: CardPage
+                Component: PhotoPage
             },
             {
                 path: '*',

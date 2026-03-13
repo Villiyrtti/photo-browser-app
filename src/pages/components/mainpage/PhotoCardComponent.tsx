@@ -7,7 +7,7 @@ import {
     type CardProps 
 } from "@mui/material";
 import { useNavigate } from "react-router";
-import type { Photo } from "../../types/CommonTypes";
+import type { Photo } from "../../../types/CommonTypes";
 
 type PhotoCardComponentProps = {
     item: Photo;

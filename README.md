@@ -12,7 +12,6 @@ An exercise for displaying photos from [JSONPlaceholder API](https://jsonplaceho
 
 ## Tech Stack
 
-- Node.js
 - TypeScript
 - REACT
 - [React Router](https://reactrouter.com/)

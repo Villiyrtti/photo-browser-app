@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Button, Grid } from "@mui/material"
-import { getPhotos } from '../../api/API';
+import { getPhotos } from '../../../api/API';
 
-import PhotoCardComponent from '../components/PhotoCardComponent';
-import type { Photo } from '../../types/CommonTypes';
+import PhotoCardComponent from './PhotoCardComponent';
+import type { Photo } from '../../../types/CommonTypes';
 
 const PhotoListComponent = () => {
     const [photos, setPhotos] = useState<Photo[]>([]);

@@ -4,7 +4,7 @@ import {
 } from '@mui/material';
 
 import HeaderComponent from './components/HeaderComponent';
-import PhotoListComponent from './components/PhotoListComponent';
+import PhotoListComponent from './components/mainpage/PhotoListComponent';
 
 const MainPage = () => {
   return (
